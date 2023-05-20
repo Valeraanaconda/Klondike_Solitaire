@@ -9,27 +9,38 @@ public class Card : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
     [SerializeField] private Texture2DArray _texture2DArray;
     [SerializeField] private Image _sourceImage;
-    public int textureIndex;
+    [SerializeField] private Sprite _backCardSprite;
+    [SerializeField] float scaleRatio;
+
+    [SerializeField] private int textureIndex;
 
     private RectTransform _rectTransform;
     private Vector2 _offest;
+    private Sprite _cardSprite;
 
     private void Awake()
     {
         _rectTransform = GetComponent<RectTransform>();
     }
 
-    void Start()
+    public void Init(bool isCardShowBackSide)
     {
-        Debug.Log(_texture2DArray.depth);
         CreateSpriteFromTextureArray();
-    }
+        //ScaleImage();
+        if (isCardShowBackSide)
+        {
+            _sourceImage.sprite = _backCardSprite;
+        }
+        else
+        {
+            _sourceImage.sprite = _cardSprite;
 
+        }
+    }
     //move init sprite functionalities
     
     void CreateSpriteFromTextureArray()
     {
-        // Получение текстуры из Texture2DArray
         Texture2D texture = new Texture2D(_texture2DArray.width, _texture2DArray.height, TextureFormat.RGBA32, false);
         Color[] pixels = _texture2DArray.GetPixels(textureIndex);
         texture.SetPixels(pixels);
@@ -40,7 +51,15 @@ public class Card : MonoBehaviour, IDragHandler, IPointerDownHandler
         Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
 
         // Использование спрайта, например, присвоение его в качестве спрайта для спрайтового рендера или SpriteRenderer
-        _sourceImage.sprite = sprite;
+        //_sourceImage.sprite = sprite;
+        _cardSprite = sprite;
+    }
+
+    private void ScaleImage()
+    {
+        _rectTransform = GetComponent<RectTransform>();
+        float diagonal = Mathf.Sqrt(Mathf.Pow(Screen.width, 2) + Mathf.Pow(Screen.height, 2));
+        _rectTransform.sizeDelta = new Vector2(diagonal * scaleRatio, diagonal * scaleRatio);
     }
 
     //move functionalities
