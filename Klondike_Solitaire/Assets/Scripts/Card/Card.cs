@@ -7,13 +7,10 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour, IDragHandler, IPointerDownHandler
 {
-    [SerializeField] private Texture2DArray _texture2DArray;
     [SerializeField] private Image _sourceImage;
     [SerializeField] private Sprite _backCardSprite;
-    [SerializeField] float scaleRatio;
 
-    [SerializeField] private int textureIndex;
-
+    [SerializeField] CardModel _cardModel;
     private RectTransform _rectTransform;
     private Vector2 _offest;
     private Sprite _cardSprite;
@@ -23,31 +20,19 @@ public class Card : MonoBehaviour, IDragHandler, IPointerDownHandler
         _rectTransform = GetComponent<RectTransform>();
     }
 
-    public void Init(bool isCardShowBackSide)
+    public void Init(CardModel cardModel,bool isCardShowBackSide)
     {
-        CreateSpriteFromTextureArray();
+        _cardModel = cardModel;
         if (isCardShowBackSide)
         {
             _sourceImage.sprite = _backCardSprite;
         }
         else
         {
-            _sourceImage.sprite = _cardSprite;
-
+            _sourceImage.sprite = _cardModel.faceImage;
         }
     }
-    
-    void CreateSpriteFromTextureArray()
-    {
-        Texture2D texture = new Texture2D(_texture2DArray.width, _texture2DArray.height, TextureFormat.RGBA32, false);
-        Color[] pixels = _texture2DArray.GetPixels(textureIndex);
-        texture.SetPixels(pixels);
-        texture.Apply();
 
-        Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
-
-        _cardSprite = sprite;
-    }
 
     public void OnDrag(PointerEventData eventData)
     {

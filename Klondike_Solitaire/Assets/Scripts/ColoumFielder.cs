@@ -27,7 +27,7 @@ public class ColoumFielder : MonoBehaviour
     private void InstantiateCard(bool v)
     {
         var card = Instantiate(_cardPrefab);
-        card.Init(v);
+        //card.Init(v);
         card.transform.SetParent(_parent);
         if (_previosSpawmObject != null)
         {

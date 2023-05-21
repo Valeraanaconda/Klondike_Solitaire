@@ -7,7 +7,7 @@ public class CardModel
 {
     [SerializeField] private Rank rank;
     [SerializeField] private Suit suit;
-    [SerializeField] private Sprite faceImage;
+    [SerializeField] public Sprite faceImage;
 
     public bool IsFaceUp { get; set; }
 

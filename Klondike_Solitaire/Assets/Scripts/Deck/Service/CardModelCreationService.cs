@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardCreationService
+public class CardModelCreationService
 {
-    public CardCreationService() { }
+    public CardModelCreationService() { }
 
     public List<CardModel> CreateCards(Sprite[,] inputSprites)
     {
@@ -37,8 +37,12 @@ public class CardCreationService
                         cardSuit = Suit.Spades;
                         break;
                 }
-                card = new CardModel(rank, cardSuit, false, inputSprites[row, col]);
-                outputList.Add(card);
+
+                if (inputSprites[row, col] != null)
+                {
+                    card = new CardModel(rank, cardSuit, false, inputSprites[row, col]);
+                    outputList.Add(card);
+                }
             }
         }
 

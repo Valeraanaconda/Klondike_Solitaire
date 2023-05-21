@@ -1,8 +1,5 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class SpriteConverter
 {
@@ -17,10 +14,11 @@ public class SpriteConverter
         int lenght = textureArray.depth;
 
         Texture2D[] textures = new Texture2D[lenght];
-        Texture2D texture = new Texture2D(textureArray.width, textureArray.height, TextureFormat.RGBA32, false);
 
         for (int i = 0; i < lenght; i++)
         {
+            Texture2D texture = new Texture2D(textureArray.width, textureArray.height, TextureFormat.RGBA32, false);
+
             Color[] pixels = textureArray.GetPixels(i);
             texture.SetPixels(pixels);
             texture.Apply();
@@ -45,6 +43,7 @@ public class SpriteConverter
 
         return sprites;
     }
+
     private T[,] ConvertTo2DArray<T>(T[] inputArray, int rows, int columns)
     {
         if (inputArray.Length != (rows * columns))
