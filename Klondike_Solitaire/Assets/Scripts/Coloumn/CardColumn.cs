@@ -5,12 +5,24 @@ using UnityEngine;
 public class CardColumn : MonoBehaviour
 {
     [SerializeField] private List<Card> cards;
-    public Transform _previosSpawmObject;
+    [SerializeField] private int _coloumnIndex;
+    private Transform _previosSpawmObject;
+
+    public void SetColoumnNumber(int index)
+    {
+        _coloumnIndex = index;
+    }
 
     public void AddCard(Card card)
     {
         cards.Add(card);
+        SetDefaultPosition(card);
+    }
+
+    private void SetDefaultPosition(Card card)
+    {
         card.transform.SetParent(transform);
+        //TODO Refactor
         if (_previosSpawmObject != null)
         {
             Vector3 newPosition = _previosSpawmObject.transform.localPosition;
@@ -32,6 +44,5 @@ public class CardColumn : MonoBehaviour
             _previosSpawmObject = card.transform;
         }
         card.transform.localScale = Vector3.one;
-        //разместить по правилам
     }
 }

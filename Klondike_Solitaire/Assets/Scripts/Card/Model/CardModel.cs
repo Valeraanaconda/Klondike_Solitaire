@@ -7,7 +7,7 @@ public class CardModel
 {
     [SerializeField] private Rank rank;
     [SerializeField] private Suit suit;
-    [SerializeField] public Sprite faceImage;
+    [SerializeField] public Sprite faceImage; //TODO Refactor create property
 
     public bool IsFaceUp { get; set; }
 

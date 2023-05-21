@@ -2,17 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CardShufflingService : MonoBehaviour
+public class CardShufflingService
 {
-    // Start is called before the first frame update
-    void Start()
+    public CardShufflingService()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

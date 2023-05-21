@@ -18,8 +18,8 @@ public class DeckManager : MonoBehaviour
         InitServices();
         _deck = _cardCreationService.CreateCards(_spriteConverter.ConvertToSprites(_texture2DArray));
         //get play deck
-        //_playDeck = CloneList(_deck);
-        _coloumnController.InitColumns(_deck);
+        _playDeck = CloneList(_deck);
+        _coloumnController.InitColumns(_playDeck);
     }
 
     private void InitServices()

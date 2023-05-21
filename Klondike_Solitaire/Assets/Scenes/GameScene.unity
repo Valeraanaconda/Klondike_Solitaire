@@ -426,6 +426,7 @@ GameObject:
   - component: {fileID: 178859166}
   - component: {fileID: 178859168}
   - component: {fileID: 178859169}
+  - component: {fileID: 178859170}
   m_Layer: 5
   m_Name: TableauColumn
   m_TagString: Untagged
@@ -474,7 +475,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards: []
-  _previosSpawmObject: {fileID: 0}
+--- !u!114 &178859170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178859165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06fc32233d0e2f4ca6841019c401366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &250828383
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,14 +516,15 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1717655519}
   m_Father: {fileID: 274868894}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -57.220947}
-  m_SizeDelta: {x: -70.0132, y: 114.4419}
+  m_AnchorMin: {x: 0, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -31.9025, y: 103.489}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250828385
 MonoBehaviour:
@@ -582,7 +595,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 250828384}
-  - {fileID: 1717655519}
   m_Father: {fileID: 2064135789}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1073,6 +1085,7 @@ GameObject:
   - component: {fileID: 647670842}
   - component: {fileID: 647670844}
   - component: {fileID: 647670845}
+  - component: {fileID: 647670846}
   m_Layer: 5
   m_Name: TableauColumn
   m_TagString: Untagged
@@ -1121,7 +1134,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards: []
-  _previosSpawmObject: {fileID: 0}
+--- !u!114 &647670846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 647670841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06fc32233d0e2f4ca6841019c401366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &858843076
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,6 +1776,7 @@ GameObject:
   - component: {fileID: 1155304230}
   - component: {fileID: 1155304232}
   - component: {fileID: 1155304233}
+  - component: {fileID: 1155304234}
   m_Layer: 5
   m_Name: TableauColumn
   m_TagString: Untagged
@@ -1800,7 +1825,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards: []
-  _previosSpawmObject: {fileID: 0}
+--- !u!114 &1155304234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155304229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06fc32233d0e2f4ca6841019c401366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1199627584
 GameObject:
   m_ObjectHideFlags: 0
@@ -2001,6 +2037,7 @@ GameObject:
   - component: {fileID: 1355728460}
   - component: {fileID: 1355728462}
   - component: {fileID: 1355728463}
+  - component: {fileID: 1355728464}
   m_Layer: 5
   m_Name: TableauColumn
   m_TagString: Untagged
@@ -2049,7 +2086,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards: []
-  _previosSpawmObject: {fileID: 0}
+--- !u!114 &1355728464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1355728459}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06fc32233d0e2f4ca6841019c401366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1404028536
 GameObject:
   m_ObjectHideFlags: 0
@@ -2061,6 +2109,7 @@ GameObject:
   - component: {fileID: 1404028537}
   - component: {fileID: 1404028540}
   - component: {fileID: 1404028541}
+  - component: {fileID: 1404028542}
   m_Layer: 5
   m_Name: TableauColumn
   m_TagString: Untagged
@@ -2109,7 +2158,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards: []
-  _previosSpawmObject: {fileID: 0}
+--- !u!114 &1404028542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1404028536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06fc32233d0e2f4ca6841019c401366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1411381078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2295,6 +2355,7 @@ GameObject:
   - component: {fileID: 1447976033}
   - component: {fileID: 1447976035}
   - component: {fileID: 1447976036}
+  - component: {fileID: 1447976037}
   m_Layer: 5
   m_Name: TableauColumn
   m_TagString: Untagged
@@ -2343,7 +2404,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards: []
-  _previosSpawmObject: {fileID: 0}
+--- !u!114 &1447976037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447976032}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06fc32233d0e2f4ca6841019c401366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1503822469
 GameObject:
   m_ObjectHideFlags: 0
@@ -2783,18 +2855,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717655518}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 274868894}
+  m_Father: {fileID: 250828384}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -57.220947}
-  m_SizeDelta: {x: -70.0132, y: 114.4419}
+  m_SizeDelta: {x: 0, y: 114.4419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717655520
 MonoBehaviour:
@@ -2843,7 +2915,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48.7
+  m_fontSize: 55.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3354,6 +3426,7 @@ GameObject:
   - component: {fileID: 1955300393}
   - component: {fileID: 1955300395}
   - component: {fileID: 1955300396}
+  - component: {fileID: 1955300397}
   m_Layer: 5
   m_Name: TableauColumn
   m_TagString: Untagged
@@ -3402,7 +3475,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cards: []
-  _previosSpawmObject: {fileID: 0}
+--- !u!114 &1955300397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1955300392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d06fc32233d0e2f4ca6841019c401366, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2008418498
 GameObject:
   m_ObjectHideFlags: 0

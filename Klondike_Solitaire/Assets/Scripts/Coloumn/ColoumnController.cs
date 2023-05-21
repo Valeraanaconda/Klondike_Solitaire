@@ -4,29 +4,29 @@ using UnityEngine;
 
 public class ColoumnController : MonoBehaviour
 {
-    [SerializeField] List<CardColumn> _cardColumns;
-    [SerializeField] CardCreator _cardCreator;
+    [SerializeField] private List<CardColumn> _cardColumns;
+    [SerializeField] private CardCreator _cardCreator;
 
     public void InitColumns(List<CardModel> cardModels)
     {
-
-        int modeleIndx = 0;
+        int modelIndex = 0;
         for (int i = 0; i < _cardColumns.Count; i++)
         {
             for (int j = 0; j <= i; j++)
             {
-                Card card = _cardCreator.CreateCard(cardModels[modeleIndx]);
+                Card card = _cardCreator.CreateCard(cardModels[modelIndex]);
                 _cardColumns[i].AddCard(card);
+                _cardColumns[i].SetColoumnNumber(i);
 
                 if (j == i)
                 {
-                    card.Init(cardModels[modeleIndx], false); // последн€€ карта на столе лежит рубашкой вверх
+                    card.Init(cardModels[modelIndex], true); // последн€€ карта на столе лежит рубашкой вверх
                 }
                 else
                 {
-                    card.Init(cardModels[modeleIndx], true);
+                    card.Init(cardModels[modelIndex], false);
                 }
-                modeleIndx++;
+                modelIndex++;
             }
         }
     }
