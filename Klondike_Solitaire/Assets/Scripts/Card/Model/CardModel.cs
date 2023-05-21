@@ -5,14 +5,17 @@ using UnityEngine;
 [System.Serializable]
 public class CardModel
 {
-    public Rank Rank { get; }
-    public Suit Suit { get; }
+    [SerializeField] private Rank rank;
+    [SerializeField] private Suit suit;
+    [SerializeField] private Sprite faceImage;
+
     public bool IsFaceUp { get; set; }
 
-    public CardModel(Rank rank, Suit suit,bool isFaceUp)
+    public CardModel(Rank rank, Suit suit, bool isFaceUp, Sprite faceImage)
     {
-        Rank = rank;
-        Suit = suit;
+        this.rank = rank;
+        this.suit = suit;
+        this.faceImage = faceImage;
         IsFaceUp = isFaceUp;
     }
 

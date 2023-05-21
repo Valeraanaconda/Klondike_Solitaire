@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class CardCreationService
@@ -10,7 +9,6 @@ public class CardCreationService
 
     public List<CardModel> CreateCards(Sprite[,] inputSprites)
     {
-
         List<CardModel> outputList = new List<CardModel>();
 
         int rows = inputSprites.GetLength(0);
@@ -21,27 +19,26 @@ public class CardCreationService
             for (int col = 0; col < columns; col++)
             {
                 Rank rank = (Rank)col;
+                Suit cardSuit = Suit.None;
                 CardModel card = new CardModel();
 
                 switch (row)
                 {
                     case 0:
-                        card = new(rank, Suit.Hearts, false);
-                        outputList.Add(card);
+                        cardSuit = Suit.Hearts;
                         break;
                     case 1:
-                        card = new(rank, Suit.Diamonds, false);
-                        outputList.Add(card);
+                        cardSuit = Suit.Diamonds;
                         break;
                     case 2:
-                        card = new(rank, Suit.Clubs, false);
-                        outputList.Add(card);
+                        cardSuit = Suit.Clubs;
                         break;
                     case 3:
-                        card = new(rank, Suit.Spades, false);
-                        outputList.Add(card);
+                        cardSuit = Suit.Spades;
                         break;
                 }
+                card = new CardModel(rank, cardSuit, false, inputSprites[row, col]);
+                outputList.Add(card);
             }
         }
 

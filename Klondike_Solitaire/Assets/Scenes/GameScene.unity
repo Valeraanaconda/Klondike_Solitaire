@@ -313,7 +313,7 @@ GameObject:
   - component: {fileID: 153619952}
   - component: {fileID: 153619951}
   m_Layer: 5
-  m_Name: TableauColim_1
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -456,10 +456,9 @@ GameObject:
   m_Component:
   - component: {fileID: 178859166}
   - component: {fileID: 178859168}
-  - component: {fileID: 178859167}
   - component: {fileID: 178859169}
   m_Layer: 5
-  m_Name: TableauColim_1 (11)
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -480,41 +479,11 @@ RectTransform:
   m_Father: {fileID: 417355439}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 388.57144, y: -513.5714}
+  m_SizeDelta: {x: 151.42857, y: 987.1429}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &178859167
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 178859165}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &178859168
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -702,7 +671,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -57.220947}
-  m_SizeDelta: {x: 0, y: 114.441895}
+  m_SizeDelta: {x: -70.0132, y: 114.4419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &250828385
 MonoBehaviour:
@@ -1047,7 +1016,7 @@ MonoBehaviour:
   m_MinHeight: -1
   m_PreferredWidth: -1
   m_PreferredHeight: -1
-  m_FlexibleWidth: 1.92
+  m_FlexibleWidth: 2
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
 --- !u!1 &417355438
@@ -1361,7 +1330,7 @@ GameObject:
   - component: {fileID: 639120105}
   - component: {fileID: 639120104}
   m_Layer: 5
-  m_Name: TableauColim_3
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1436,10 +1405,9 @@ GameObject:
   m_Component:
   - component: {fileID: 647670842}
   - component: {fileID: 647670844}
-  - component: {fileID: 647670843}
   - component: {fileID: 647670845}
   m_Layer: 5
-  m_Name: TableauColim_1 (14)
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1460,41 +1428,11 @@ RectTransform:
   m_Father: {fileID: 417355439}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 842.8572, y: -513.5714}
+  m_SizeDelta: {x: 151.42857, y: 987.1429}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &647670843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 647670841}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &647670844
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1838,7 +1776,7 @@ GameObject:
   - component: {fileID: 1006705966}
   - component: {fileID: 1006705965}
   m_Layer: 5
-  m_Name: TableauColim_5
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1914,7 +1852,7 @@ GameObject:
   - component: {fileID: 1031061289}
   - component: {fileID: 1031061288}
   m_Layer: 5
-  m_Name: TableauColim_2
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2113,7 +2051,7 @@ GameObject:
   - component: {fileID: 1061459585}
   - component: {fileID: 1061459584}
   m_Layer: 5
-  m_Name: TableauColim_6
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2399,10 +2337,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1155304230}
   - component: {fileID: 1155304232}
-  - component: {fileID: 1155304231}
   - component: {fileID: 1155304233}
   m_Layer: 5
-  m_Name: TableauColim_2
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2423,41 +2360,11 @@ RectTransform:
   m_Father: {fileID: 417355439}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 237.14285, y: -513.5714}
+  m_SizeDelta: {x: 151.42857, y: 987.1429}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1155304231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1155304229}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1155304232
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2636,7 +2543,7 @@ GameObject:
   - component: {fileID: 1247994130}
   - component: {fileID: 1247994129}
   m_Layer: 5
-  m_Name: TableauColim_4
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2711,10 +2618,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1355728460}
   - component: {fileID: 1355728462}
-  - component: {fileID: 1355728461}
   - component: {fileID: 1355728463}
   m_Layer: 5
-  m_Name: TableauColim_1 (13)
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2735,41 +2641,11 @@ RectTransform:
   m_Father: {fileID: 417355439}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 691.4286, y: -513.5714}
+  m_SizeDelta: {x: 151.42857, y: 987.1429}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1355728461
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1355728459}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1355728462
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2805,10 +2681,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1404028537}
   - component: {fileID: 1404028540}
-  - component: {fileID: 1404028539}
   - component: {fileID: 1404028538}
   m_Layer: 5
-  m_Name: TableauColim_1 (15)
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2829,10 +2704,10 @@ RectTransform:
   m_Father: {fileID: 417355439}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 994.28577, y: -513.5714}
+  m_SizeDelta: {x: 151.42857, y: 987.1429}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1404028538
 MonoBehaviour:
@@ -2851,36 +2726,6 @@ MonoBehaviour:
   _spawnValue: 7
   _spawnOffset: 50
   _previosSpawmObject: {fileID: 0}
---- !u!114 &1404028539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1404028536}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1404028540
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3073,10 +2918,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1447976033}
   - component: {fileID: 1447976035}
-  - component: {fileID: 1447976034}
   - component: {fileID: 1447976036}
   m_Layer: 5
-  m_Name: TableauColim_1 (12)
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3097,41 +2941,11 @@ RectTransform:
   m_Father: {fileID: 417355439}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 540, y: -513.5714}
+  m_SizeDelta: {x: 151.42857, y: 987.1429}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1447976034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1447976032}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1447976035
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3733,7 +3547,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: -57.220947}
-  m_SizeDelta: {x: 0, y: 114.441895}
+  m_SizeDelta: {x: -70.0132, y: 114.4419}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1717655520
 MonoBehaviour:
@@ -3782,7 +3596,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 59.95
+  m_fontSize: 48.7
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3818,7 +3632,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 14.810434, z: 0, w: 26.928263}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4292,10 +4106,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1955300393}
   - component: {fileID: 1955300395}
-  - component: {fileID: 1955300394}
   - component: {fileID: 1955300396}
   m_Layer: 5
-  m_Name: TableauColim_1
+  m_Name: TableauColumn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4316,41 +4129,11 @@ RectTransform:
   m_Father: {fileID: 417355439}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 85.71429, y: -513.5714}
+  m_SizeDelta: {x: 151.42857, y: 987.1429}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1955300394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1955300392}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1955300395
 CanvasRenderer:
   m_ObjectHideFlags: 0
