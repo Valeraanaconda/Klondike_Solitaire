@@ -91,6 +91,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _texture2DArray: {fileID: 18700000, guid: ddec2e07f44edac4aa755b8303de7aff, type: 3}
   _sourceImage: {fileID: 7933541970968846996}
-  _backCardSprite: {fileID: 21300000, guid: d3381d17f68f97540a190da5598a964d, type: 3}
+  _backCardSprite: {fileID: 21300000, guid: f4c4fcffa9492214dadd3a583aeb2da7, type: 3}
   scaleRatio: 0.09
   textureIndex: 0

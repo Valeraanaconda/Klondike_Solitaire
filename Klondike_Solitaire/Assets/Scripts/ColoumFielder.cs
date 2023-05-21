@@ -41,6 +41,12 @@ public class ColoumFielder : MonoBehaviour
         }
         else
         {
+            Vector3 newPosition = card.transform.localPosition;
+            float newY = 100*(-1);
+            newPosition.y = newY;
+
+            // Применение новой позиции к изображению
+            card.transform.localPosition = newPosition;
             _previosSpawmObject = card.transform;
         }
         card.transform.localScale = Vector3.one;

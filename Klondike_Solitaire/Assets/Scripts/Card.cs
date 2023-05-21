@@ -26,7 +26,6 @@ public class Card : MonoBehaviour, IDragHandler, IPointerDownHandler
     public void Init(bool isCardShowBackSide)
     {
         CreateSpriteFromTextureArray();
-        //ScaleImage();
         if (isCardShowBackSide)
         {
             _sourceImage.sprite = _backCardSprite;
@@ -37,7 +36,6 @@ public class Card : MonoBehaviour, IDragHandler, IPointerDownHandler
 
         }
     }
-    //move init sprite functionalities
     
     void CreateSpriteFromTextureArray()
     {
@@ -47,22 +45,13 @@ public class Card : MonoBehaviour, IDragHandler, IPointerDownHandler
         texture.Apply();
 
 
-        // Создание спрайта из текстуры
         Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
 
-        // Использование спрайта, например, присвоение его в качестве спрайта для спрайтового рендера или SpriteRenderer
-        //_sourceImage.sprite = sprite;
         _cardSprite = sprite;
     }
 
-    private void ScaleImage()
-    {
-        _rectTransform = GetComponent<RectTransform>();
-        float diagonal = Mathf.Sqrt(Mathf.Pow(Screen.width, 2) + Mathf.Pow(Screen.height, 2));
-        _rectTransform.sizeDelta = new Vector2(diagonal * scaleRatio, diagonal * scaleRatio);
-    }
 
-    //move functionalities
+
     public void OnDrag(PointerEventData eventData)
     {
         Vector2 newPos = eventData.position + _offest;
@@ -75,5 +64,4 @@ public class Card : MonoBehaviour, IDragHandler, IPointerDownHandler
         Vector2 vec = new Vector2(_rectTransform.position.x, _rectTransform.position.y);
         _offest = vec - eventData.position;
     }
-    //
 }
