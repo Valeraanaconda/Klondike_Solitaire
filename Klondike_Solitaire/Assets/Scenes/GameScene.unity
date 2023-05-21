@@ -153,7 +153,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 977494764}
+  m_Father: {fileID: 109377218}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -292,6 +292,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 3093766}
   - {fileID: 977494764}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -1319,7 +1320,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 3093766}
   - {fileID: 1601017601}
   m_Father: {fileID: 109377218}
   m_RootOrder: -1
@@ -1341,7 +1341,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a6c986ded9e2254394a9c8378ea4b97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uiElement: {fileID: 977494764}
 --- !u!1 &1006705962
 GameObject:
   m_ObjectHideFlags: 0
