@@ -44,20 +44,16 @@ public class Card : MonoBehaviour, IDragHandler, IPointerDownHandler
         texture.SetPixels(pixels);
         texture.Apply();
 
-
         Sprite sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height), Vector2.zero);
 
         _cardSprite = sprite;
     }
-
-
 
     public void OnDrag(PointerEventData eventData)
     {
         Vector2 newPos = eventData.position + _offest;
         _rectTransform.position = newPos;
     }
-
 
     public void OnPointerDown(PointerEventData eventData)
     {
