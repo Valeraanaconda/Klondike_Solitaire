@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DeckManager : MonoBehaviour
@@ -8,6 +8,7 @@ public class DeckManager : MonoBehaviour
     [SerializeField] private List<CardModel> _playDeck;
     [SerializeField] private Texture2DArray _texture2DArray;
     [SerializeField] private ColoumnController _coloumnController;
+    [SerializeField] private WasteController _wasteController;
 
     private CardShufflingService _cardShufflingService;
     private CardModelCreationService _cardCreationService;
@@ -15,11 +16,15 @@ public class DeckManager : MonoBehaviour
 
     public void Init()
     {
+        List<Card> waste = new List<Card>();
         InitServices();
-        _deck = _cardCreationService.CreateCards(_spriteConverter.ConvertToSprites(_texture2DArray));
-        //get play deck
-        //_playDeck = CloneList(_deck);
-        _coloumnController.InitColumns(_deck);
+        Sprite[,] cardSprites = _spriteConverter.ConvertToSprites(_texture2DArray);
+
+        _deck = _cardCreationService.CreateCards(cardSprites);
+        _playDeck = CloneList(_deck);
+        _cardShufflingService.ShuffleDeck(_playDeck);
+        _coloumnController.InitColumns(_playDeck, waste);
+        _wasteController.Init(waste);
     }
 
     private void InitServices()

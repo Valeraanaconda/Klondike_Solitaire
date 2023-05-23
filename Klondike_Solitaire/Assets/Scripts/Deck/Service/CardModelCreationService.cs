@@ -38,11 +38,8 @@ public class CardModelCreationService
                         break;
                 }
 
-                if (inputSprites[row, col] != null)
-                {
-                    card = new CardModel(rank, cardSuit, false, inputSprites[row, col]);
-                    outputList.Add(card);
-                }
+                card = new CardModel(rank, cardSuit, false, inputSprites[row, col]);
+                outputList.Add(card);
             }
         }
 

@@ -1,18 +1,21 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using System;
 
-public class CardShufflingService : MonoBehaviour
+public class CardShufflingService
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public CardShufflingService() { }
 
-    // Update is called once per frame
-    void Update()
+    public void ShuffleDeck(List<CardModel> unShuffledDeck)
     {
-        
+        Random random = new Random();
+        int n = unShuffledDeck.Count;
+        while (n > 1)
+        {
+            n--;
+            int k = random.Next(n + 1);
+            CardModel card = unShuffledDeck[k];
+            unShuffledDeck[k] = unShuffledDeck[n];
+            unShuffledDeck[n] = card;
+        }
     }
 }

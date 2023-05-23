@@ -1,48 +1,31 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Card : MonoBehaviour, IDragHandler, IPointerDownHandler
+public class Card : MonoBehaviour
 {
     [SerializeField] private Image _sourceImage;
     [SerializeField] private Sprite _backCardSprite;
+    public CardColumn _currentColoumn;
+    public CardModel _cardModel;
+    public DragHandler _dragHandler;
+    public bool _isNeedToGoDafultParent;
 
-    [SerializeField] CardModel _cardModel;
-    private RectTransform _rectTransform;
-    private Vector2 _offest;
-    private Sprite _cardSprite;
-
-    private void Awake()
-    {
-        _rectTransform = GetComponent<RectTransform>();
-    }
-
-    public void Init(CardModel cardModel,bool isCardShowBackSide)
+    public void Init(CardModel cardModel, CardColumn cardColoumn, bool isFaceUp)
     {
         _cardModel = cardModel;
-        if (isCardShowBackSide)
+        _cardModel.isFaceUp = isFaceUp;
+        _currentColoumn = cardColoumn;
+        _dragHandler = GetComponent<DragHandler>();
+        
+        if (isFaceUp)
         {
-            _sourceImage.sprite = _backCardSprite;
+            _sourceImage.sprite = _cardModel.faceImage;
+
         }
         else
         {
-            _sourceImage.sprite = _cardModel.faceImage;
+            _sourceImage.sprite = _backCardSprite;
+
         }
-    }
-
-
-    public void OnDrag(PointerEventData eventData)
-    {
-        Vector2 newPos = eventData.position + _offest;
-        _rectTransform.position = newPos;
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        Vector2 vec = new Vector2(_rectTransform.position.x, _rectTransform.position.y);
-        _offest = vec - eventData.position;
     }
 }
