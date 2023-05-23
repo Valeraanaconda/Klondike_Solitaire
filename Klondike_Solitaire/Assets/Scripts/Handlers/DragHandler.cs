@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
@@ -44,8 +45,35 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
 
         if (card._cardModel.isFaceUp && card._isNeedToGoDafultParent)
         {
-            transform.SetParent(_originalParent);
-            transform.localPosition = new Vector3(_startPosition.x, _startPosition.y);
+            if (transform.childCount > 0)
+            {
+                List<Card> childCards = new List<Card>();
+                ReturnParent(card);
+
+
+                for (int i = 0; i < transform.childCount; i++)
+                {
+                    Card childCard = transform.GetChild(i).GetComponent<Card>();
+                    if (childCard != null)
+                    {
+                        childCards.Add(childCard);
+                    }
+                }
+                foreach (Card card in childCards)
+                {
+                    card.transform.SetParent(_originalParent);
+                }
+            }
+            else
+            {
+                ReturnParent(card);
+            }
         }
+    }
+
+    private void ReturnParent(Card card)
+    {
+        card.transform.SetParent(_originalParent);
+        card.transform.localPosition = new Vector3(_startPosition.x, _startPosition.y);
     }
 }

@@ -8,7 +8,7 @@ public class ColoumnController : MonoBehaviour
     [SerializeField] private CardCreator _cardCreator;
     [SerializeField] private CardMoverController cardMover;
 
-    public void InitColumns(List<CardModel> cardModels)
+    public void InitColumns(List<CardModel> cardModels,List<Card> waste)
     {
         int modelIndex = 0;
         for (int i = 0; i < _cardColumns.Count; i++)
@@ -16,11 +16,11 @@ public class ColoumnController : MonoBehaviour
             for (int j = 0; j <= i; j++)
             {
                 Card card = _cardCreator.CreateCard(cardModels[modelIndex]);
-                _cardColumns[i].InitCard(card);
+                _cardColumns[i].DefaultCard(card);
 
                 if (j == i)
                 {
-                    card.Init(cardModels[modelIndex], _cardColumns[i], true); // последн€€ карта на столе лежит рубашкой вверх
+                    card.Init(cardModels[modelIndex], _cardColumns[i], true);
                 }
                 else
                 {
@@ -29,6 +29,12 @@ public class ColoumnController : MonoBehaviour
                 card._dragHandler._OnBeginDrag += cardMover.ReparentCardToTopUI;
                 modelIndex++;
             }
+        }
+
+        for (int i = modelIndex; i < cardModels.Count; i++)
+        {
+            Card card = _cardCreator.CreateCard(cardModels[modelIndex]);
+            waste.Add(card);
         }
     }
 }

@@ -5,21 +5,22 @@ using UnityEngine;
 public class CardColumn : MonoBehaviour
 {
     [SerializeField] private List<Card> cards;
-    private Transform _previosSpawmObject;
+    private Transform _previosSpawnObject;
     private int _initOffset = 25;
     private int _newCardOffset = 50;
     private int _defaultY = -100;
 
-    public void InitCard(Card card) // rename
+    public void DefaultCard(Card card)
     {
         AddCard(card);
-        SetDefaultPosition(card, _initOffset);
+        SetCardPosition(card, _initOffset);
     }
 
-    public void AddNewCard(Card card)
+    public void AddNewCard(Card card) //REFACTORING!!!
     {
         AddCard(card);
-        SetDefaultPosition(card, _newCardOffset);
+        SetCardPosition(card, _newCardOffset);
+        SetCardPosition(card);
     }
 
     private void AddCard(Card card)
@@ -29,13 +30,25 @@ public class CardColumn : MonoBehaviour
 
     public void RevomeCard(Card card)
     {
-        foreach (var obj in cards)
+        cards.RemoveAll(obj => obj == card);
+    }
+
+    public List<Card> GetCardsAfter(Card card)
+    {
+        int index = cards.IndexOf(card);
+
+        if (index != cards.Count - 1)
         {
-            if (obj == card)
+            List<Card> list = new List<Card>();
+            for (int i = index; i < cards.Count; i++)
             {
-                cards.Remove(obj);
-                return;
+                list.Add(cards[i]);
             }
+            return list;
+        }
+        else
+        {
+            return new List<Card>();
         }
     }
 
@@ -44,28 +57,40 @@ public class CardColumn : MonoBehaviour
         return cards.LastOrDefault();
     }
 
-    private void SetDefaultPosition(Card card, int offest)
+    private void SetCardPosition(Card card, int offest)
     {
         card.transform.SetParent(transform);
         Vector3 newPosition = new Vector3();
-        if (_previosSpawmObject != null)
+        if (_previosSpawnObject != null)
         {
-            newPosition = _previosSpawmObject.transform.localPosition;
+            newPosition = _previosSpawnObject.transform.localPosition;
             float newY = newPosition.y - offest;
             newPosition.y = newY;
 
             card.transform.localPosition = newPosition;
-            _previosSpawmObject = card.transform;
+            _previosSpawnObject = card.transform;
         }
         else
         {
-
             newPosition = card.transform.localPosition;
             newPosition.y = _defaultY;
 
             card.transform.localPosition = newPosition;
-            _previosSpawmObject = card.transform;
+            _previosSpawnObject = card.transform;
         }
+        card.transform.localScale = Vector3.one;
+    }
+
+    private void SetCardPosition(Card card)
+    {
+        Vector3 newPosition = new Vector3();
+
+        newPosition = GetLastCard().transform.localPosition;
+        
+
+        card.transform.localPosition = newPosition;
+        _previosSpawnObject = card.transform;
+
         card.transform.localScale = Vector3.one;
     }
 }

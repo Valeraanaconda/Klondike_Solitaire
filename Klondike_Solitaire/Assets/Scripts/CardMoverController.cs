@@ -10,6 +10,16 @@ public class CardMoverController : MonoBehaviour
 
     public void ReparentCardToTopUI(Card card)
     {
+        var movableCard = card._currentColoumn;
+        List<Card> cards = movableCard.GetCardsAfter(card);
+        if (cards != null)
+        {
+            foreach (var obj in cards)
+            {
+                obj.transform.SetParent(card.transform);
+            }
+        }
+
         card.transform.SetParent(_buffertraqnsform);
     }
 }
