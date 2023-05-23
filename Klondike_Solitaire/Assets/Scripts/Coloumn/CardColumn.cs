@@ -1,45 +1,68 @@
-using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CardColumn : MonoBehaviour
 {
     [SerializeField] private List<Card> cards;
-    [SerializeField] private int _coloumnIndex;
     private Transform _previosSpawmObject;
+    private int _initOffset = 25;
+    private int _newCardOffset = 50;
+    private int _defaultY = -100;
 
-    public void SetColoumnNumber(int index)
+    public void InitCard(Card card) // rename
     {
-        _coloumnIndex = index;
+        AddCard(card);
+        SetDefaultPosition(card, _initOffset);
     }
 
-    public void AddCard(Card card)
+    public void AddNewCard(Card card)
+    {
+        AddCard(card);
+        SetDefaultPosition(card, _newCardOffset);
+    }
+
+    private void AddCard(Card card)
     {
         cards.Add(card);
-        SetDefaultPosition(card);
     }
 
-    private void SetDefaultPosition(Card card)
+    public void RevomeCard(Card card)
+    {
+        foreach (var obj in cards)
+        {
+            if (obj == card)
+            {
+                cards.Remove(obj);
+                return;
+            }
+        }
+    }
+
+    public Card GetLastCard()
+    {
+        return cards.LastOrDefault();
+    }
+
+    private void SetDefaultPosition(Card card, int offest)
     {
         card.transform.SetParent(transform);
-        //TODO Refactor
+        Vector3 newPosition = new Vector3();
         if (_previosSpawmObject != null)
         {
-            Vector3 newPosition = _previosSpawmObject.transform.localPosition;
-            float newY = newPosition.y - 25f;
+            newPosition = _previosSpawmObject.transform.localPosition;
+            float newY = newPosition.y - offest;
             newPosition.y = newY;
 
-            // Применение новой позиции к изображению
             card.transform.localPosition = newPosition;
             _previosSpawmObject = card.transform;
         }
         else
         {
-            Vector3 newPosition = card.transform.localPosition;
-            float newY = 100 * (-1);
-            newPosition.y = newY;
 
-            // Применение новой позиции к изображению
+            newPosition = card.transform.localPosition;
+            newPosition.y = _defaultY;
+
             card.transform.localPosition = newPosition;
             _previosSpawmObject = card.transform;
         }

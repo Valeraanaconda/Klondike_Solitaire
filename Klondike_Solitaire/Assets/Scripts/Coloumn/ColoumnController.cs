@@ -6,6 +6,7 @@ public class ColoumnController : MonoBehaviour
 {
     [SerializeField] private List<CardColumn> _cardColumns;
     [SerializeField] private CardCreator _cardCreator;
+    [SerializeField] private CardMoverController cardMover;
 
     public void InitColumns(List<CardModel> cardModels)
     {
@@ -15,17 +16,17 @@ public class ColoumnController : MonoBehaviour
             for (int j = 0; j <= i; j++)
             {
                 Card card = _cardCreator.CreateCard(cardModels[modelIndex]);
-                _cardColumns[i].AddCard(card);
-                _cardColumns[i].SetColoumnNumber(i);
+                _cardColumns[i].InitCard(card);
 
                 if (j == i)
                 {
-                    card.Init(cardModels[modelIndex], true); // последн€€ карта на столе лежит рубашкой вверх
+                    card.Init(cardModels[modelIndex], _cardColumns[i], true); // последн€€ карта на столе лежит рубашкой вверх
                 }
                 else
                 {
-                    card.Init(cardModels[modelIndex], false);
+                    card.Init(cardModels[modelIndex], _cardColumns[i], false);
                 }
+                card._dragHandler._OnBeginDrag += cardMover.ReparentCardToTopUI;
                 modelIndex++;
             }
         }

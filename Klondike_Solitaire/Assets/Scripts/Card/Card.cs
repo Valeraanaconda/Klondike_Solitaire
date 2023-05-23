@@ -1,22 +1,22 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Card : MonoBehaviour
-{ 
-    //TODO extract view
+{
     [SerializeField] private Image _sourceImage;
     [SerializeField] private Sprite _backCardSprite;
+    public CardColumn _currentColoumn;
+    public CardModel _cardModel;
+    public DragHandler _dragHandler;
+    public bool _isNeedToGoDafultParent;
 
-    [SerializeField] CardModel _cardModel;
-
-
-    public void Init(CardModel cardModel, bool isFaceUp)
+    public void Init(CardModel cardModel, CardColumn cardColoumn, bool isFaceUp)
     {
         _cardModel = cardModel;
+        _cardModel.isFaceUp = isFaceUp;
+        _currentColoumn = cardColoumn;
+        _dragHandler = GetComponent<DragHandler>();
+        
         if (isFaceUp)
         {
             _sourceImage.sprite = _cardModel.faceImage;
