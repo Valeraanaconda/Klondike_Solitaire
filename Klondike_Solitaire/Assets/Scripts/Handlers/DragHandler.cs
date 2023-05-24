@@ -50,15 +50,8 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
                 List<Card> childCards = new List<Card>();
                 ReturnParent(card);
 
+                GetChildList(childCards);
 
-                for (int i = 0; i < transform.childCount; i++)
-                {
-                    Card childCard = transform.GetChild(i).GetComponent<Card>();
-                    if (childCard != null)
-                    {
-                        childCards.Add(childCard);
-                    }
-                }
                 foreach (Card card in childCards)
                 {
                     card.transform.SetParent(_originalParent);
@@ -67,6 +60,18 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             else
             {
                 ReturnParent(card);
+            }
+        }
+    }
+
+    private void GetChildList(List<Card> childCards)
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Card childCard = transform.GetChild(i).GetComponent<Card>();
+            if (childCard != null)
+            {
+                childCards.Add(childCard);
             }
         }
     }

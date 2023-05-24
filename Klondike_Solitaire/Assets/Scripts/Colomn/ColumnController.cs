@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColoumnController : MonoBehaviour
+public class ColumnController : MonoBehaviour
 {
     [SerializeField] private List<CardColumn> _cardColumns;
     [SerializeField] private CardCreator _cardCreator;
-    [SerializeField] private CardMoverController cardMover;
+    [SerializeField] private CardCache cardMover;
 
     public void InitColumns(List<CardModel> cardModels,List<Card> waste)
     {

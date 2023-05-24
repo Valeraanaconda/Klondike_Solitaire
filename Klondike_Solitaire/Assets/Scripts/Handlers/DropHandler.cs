@@ -29,15 +29,7 @@ public class DropHandler : MonoBehaviour, IDropHandler
             {
                 _movableCard
             };
-            for (int i = 0; i < _movableCard.transform.childCount; i++)
-            {
-                Card childCard = _movableCard.transform.GetChild(i).GetComponent<Card>();
-
-                if (childCard != null)
-                {
-                    childCards.Add(childCard);
-                }
-            }
+            GetcChildList(_movableCard, childCards);
             foreach (Card card in childCards)
             {
                 AddCard(card, lastCardInDropColoumn);
@@ -46,6 +38,19 @@ public class DropHandler : MonoBehaviour, IDropHandler
         else
         {
             AddCard(_movableCard, lastCardInDropColoumn);
+        }
+    }
+
+    private static void GetcChildList(Card _movableCard, List<Card> childCards)
+    {
+        for (int i = 0; i < _movableCard.transform.childCount; i++)
+        {
+            Card childCard = _movableCard.transform.GetChild(i).GetComponent<Card>();
+
+            if (childCard != null)
+            {
+                childCards.Add(childCard);
+            }
         }
     }
 
