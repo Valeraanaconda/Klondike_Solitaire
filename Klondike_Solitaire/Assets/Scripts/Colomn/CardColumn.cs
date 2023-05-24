@@ -16,11 +16,11 @@ public class CardColumn : MonoBehaviour
         SetCardPosition(card, _initOffset);
     }
 
-    public void AddNewCard(Card card) //REFACTORING!!!
+    public void AddNewCard(Card card)
     {
         AddCard(card);
         SetCardPosition(card, _newCardOffset);
-        SetCardPosition(card);
+        UpdatePosition(card);
     }
 
     private void AddCard(Card card)
@@ -81,7 +81,7 @@ public class CardColumn : MonoBehaviour
         card.transform.localScale = Vector3.one;
     }
 
-    private void SetCardPosition(Card card)
+    private void UpdatePosition(Card card)
     {
         Vector3 newPosition = new Vector3();
 

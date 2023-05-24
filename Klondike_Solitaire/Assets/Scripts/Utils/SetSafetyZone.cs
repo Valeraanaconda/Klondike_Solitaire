@@ -4,13 +4,13 @@ public class SetSafetyZone : MonoBehaviour
 {
     private RectTransform _uiElement;
 
-    void Start()
+    private void Start()
     {
         _uiElement = GetComponent<RectTransform>();
         ApplySafeZoneSize();
     }
 
-    void ApplySafeZoneSize()
+    private void ApplySafeZoneSize()
     {
         Rect safeArea = Screen.safeArea;
         Vector2 anchorMin = safeArea.position;

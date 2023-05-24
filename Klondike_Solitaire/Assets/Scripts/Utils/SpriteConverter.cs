@@ -3,14 +3,18 @@ using UnityEngine;
 
 public class SpriteConverter
 {
-    public SpriteConverter() { }
-
-    public Sprite[,] ConvertToSprites(Texture2DArray textureArray)
+    const string CARDS_TEXTURES_PATH = "CardsArray";
+    private Texture2DArray textureArray;
+    public SpriteConverter()
     {
-        //TODO refactor
+        textureArray = Resources.Load<Texture2DArray>(CARDS_TEXTURES_PATH);
+    }
+
+    public Sprite[,] ConvertToSprites()
+    {
         int columnCount = 13; 
         int rowCount = 4;
-        //
+
         int lenght = textureArray.depth;
 
         Texture2D[] textures = new Texture2D[lenght];
