@@ -1302,6 +1302,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _wasteCards: []
+  _waste: {fileID: 1085641836}
   _wasteCount: {fileID: 1127748572}
 --- !u!4 &524671757
 Transform:
@@ -2490,9 +2491,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 939954fd88d36c04fa1d53313b4e7db5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _deck: []
-  _playDeck: []
-  _texture2DArray: {fileID: 18700000, guid: ddec2e07f44edac4aa755b8303de7aff, type: 3}
   _coloumnController: {fileID: 602135347}
   _wasteController: {fileID: 524671756}
 --- !u!4 &1199627586
